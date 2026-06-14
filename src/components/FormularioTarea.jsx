@@ -8,12 +8,13 @@ const FormularioTarea = () => {
   return (
     <section>
       <form>
-        <div class="mb-3 d-flex ">
+        <div className="mb-3 d-flex ">
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="inputTarea"
             placeholder="Ingresa una tarea"
+            onChange={(e) => setTarea(e.target.value)}
           />
           <button className="btn btn-primary">Enviar</button>
         </div>
