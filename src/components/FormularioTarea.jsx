@@ -4,6 +4,8 @@ import ListaTarea from "./ListaTarea";
 const FormularioTarea = () => {
   const [arrayTareas, setarrayTareas] = useState([])
   const [ tarea, setTarea] = useState('')
+  const handleSubmit = (e) => { e.preventDefault()}
+
 
   return (
     <section>
@@ -15,6 +17,7 @@ const FormularioTarea = () => {
             id="inputTarea"
             placeholder="Ingresa una tarea"
             onChange={(e) => setTarea(e.target.value)}
+            value={tarea}
           />
           <button className="btn btn-primary">Enviar</button>
         </div>
