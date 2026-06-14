@@ -1,6 +1,10 @@
+import { useState } from "react";
 import ListaTarea from "./ListaTarea";
 
 const FormularioTarea = () => {
+  const [arrayTareas, setarrayTareas] = useState([])
+  const [ tarea, setTarea] = useState('')
+
   return (
     <section>
       <form>
