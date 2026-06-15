@@ -8,15 +8,19 @@ const FormularioTarea = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const tareaBuscada = arrayTareas.find ((itemTarea)=>itemTarea.toLowerCase === tarea.toLowerCase().trim())
-    console.log(tareaBuscada)
-    if (tareaBuscada){
-      return alert('la tarea ya existe')
-       
+    const tareaBuscada = arrayTareas.find(
+      (itemTarea) => itemTarea.toLowerCase === tarea.toLowerCase().trim(),
+    );
+    console.log(tareaBuscada);
+    if (tareaBuscada) {
+      return alert("la tarea ya existe");
     }
-    setarrayTareas ([...arrayTareas, tarea.trim()]) 
-    setTarea('')
-    
+    setarrayTareas([...arrayTareas, tarea.trim()]);
+    setTarea("");
+  };
+  const borrarTarea = (nombreTarea) => {
+    const arrayFiltrado = arrayTareas.filter((item) => item !== nombreTarea);
+    setarrayTareas(arrayFiltrado);
   };
   return (
     <section>
@@ -33,7 +37,7 @@ const FormularioTarea = () => {
           <button className="btn btn-primary">Enviar</button>
         </div>
       </form>
-      <ListaTarea arraytareasProps = {arrayTareas}></ListaTarea>
+      <ListaTarea arraytareasProps={arrayTareas} borrarTareaProps={borrarTarea}></ListaTarea>
     </section>
   );
 };
