@@ -2,14 +2,25 @@ import { useState } from "react";
 import ListaTarea from "./ListaTarea";
 
 const FormularioTarea = () => {
-  const [arrayTareas, setarrayTareas] = useState([])
-  const [ tarea, setTarea] = useState('')
-  const handleSubmit = (e) => { e.preventDefault()}
+  const [arrayTareas, setarrayTareas] = useState([]);
+  const [tarea, setTarea] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    const tareaBuscada = arrayTareas.find ((itemTarea)=>itemTarea.toLowerCase === tarea.toLowerCase().trim())
+    console.log(tareaBuscada)
+    if (tareaBuscada){
+      return alert('la tarea ya existe')
+       
+    }
+    setarrayTareas ([...arrayTareas, tarea.trim()]) 
+    setTarea('')
+    
+  };
   return (
     <section>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="mb-3 d-flex ">
           <input
             type="text"
