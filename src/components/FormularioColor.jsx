@@ -1,11 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ListaColor from "./ListaColor";
 
 const FormularioColor = () => {
-  const [arrayColores, setarrayColores] = useState([]);
-  const [color, setColor] = useState("");
+  const tareaLocalstorage = JSON.parse(localStorage.getItem('arrayColoreskey')) || []
+  const [arrayColores, setarrayColores] = useState(tareaLocalstorage);
+  const [color, setColor] = useState('');
+   //useEffect(()=>{
+    //console.log('desde el useEffect')
+   //})
+  useEffect(()=>{
+    console.log('desde el useEffect')
+    localStorage.setItem('arrayColoreskey', JSON.stringify(arrayColores))
+   },[arrayColores])
 
-  const handleSubmit = (e) => {
+
+   const handleSubmit = (e) => {
     e.preventDefault();
 
     const colorBuscada = arrayColores.find(
@@ -37,7 +46,7 @@ const FormularioColor = () => {
           <button className="btn btn-primary">Enviar</button>
         </div>
       </form>
-      <ListaColor arraycolorsProps={arrayColores} borrarColorProps={borrarColor}></ListaColor>
+      <ListaColor arrayColoresProps={arrayColores} borrarColorProps={borrarColor}></ListaColor>
     </section>
   );
 };
