@@ -1,0 +1,11 @@
+const ItemColor = ({textoColorProps, deleteColorProps} ) => {
+  return (
+    <li className="list-group-item d-flex justify-content-between align-items-center">
+      {textoColorProps} <button className="btn btn-danger"
+       onClick={()=> deleteColorProps(textoColorProps)}> 
+       Borrar </button>
+    </li>
+  );
+};
+
+export default ItemColor;
