@@ -1,4 +1,4 @@
-const ItemColor = ({ textoColorProps, deleteColorProps }) => {
+const ItemColor = ({ id, textoColorProps, deleteColorProps, onEditColorProps }) => {
   const traductorColores = {
     rojo: "red",
     azul: "blue",
@@ -18,24 +18,25 @@ const ItemColor = ({ textoColorProps, deleteColorProps }) => {
   const colorLimpio = textoColorProps.toLowerCase().trim();
   const colorFinalCSS = traductorColores[colorLimpio] || colorLimpio;
   return (
-    <li className="list-group-item d-flex justify-content-between align-items-center gap-3 border-secondary mb-2">
+    <li className="list-group-item    bg-black text-white  d-flex    align-items-center gap-3 border-secondary mb-2 p-2">
       <div
-        className="d-flex align-items-center justify-content-center  border border-secondary rounded p-1 flex-grow-1"
+        className="d-flex align-items-center justify-content-center  border border-secondary rounded p-1 flex-grow-1 gap-3"
         style={{ minHeight: "50px" }}
       >
         <div
           style={{
             backgroundColor: colorFinalCSS,
-            width: "20%",
-            height: "40px",
+            width: "35%",
+            height: "38px",
             borderRadius: "4px",
-            border: "1px solid #dee2e6",
+            border: "1px solid #6c757d",
             boxShadow: "inset 0 1px 3px rgba(0,0,0,0.3)",
+            flexShrink:0,
           }}
         />
         <div className="flex-grow-1  ms-3 px-2">
           <span
-            className="small text-capitalize text-light fw-semibold"
+            className="small text-capitalize text-light fw-bold"
             style={{ fontSize: "0.9rem" }}
           >
             {textoColorProps}
@@ -45,13 +46,13 @@ const ItemColor = ({ textoColorProps, deleteColorProps }) => {
       <div className="d-flex gap-2">
         <button
           className="btn btn-warning px-3"
-          onClick={() => onEditColorProps && onEditColorProps(textoColorProps)}
+          onClick={() => onEditColorProps && onEditColorProps(id)}
         >
           Editar
         </button>
         <button
           className="btn btn-danger px-3"
-          onClick={() => deleteColorProps(textoColorProps)}
+          onClick={() => deleteColorProps(id)}
         >
           Borrar{" "}
         </button>
