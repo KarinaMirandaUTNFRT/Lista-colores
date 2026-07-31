@@ -42,7 +42,7 @@ const FormularioColor = () => {
             type="text"
             className="form-control"
             id="inputColor"
-            placeholder="Ingresa un color (ej: rojo, verde, blue, #ff0055)"
+            placeholder="Ingresa el nombre de un color de la lista"
             onChange={(e) => setColor(e.target.value)}
             value={color}
           />
