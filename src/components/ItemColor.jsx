@@ -42,12 +42,20 @@ const ItemColor = ({ textoColorProps, deleteColorProps }) => {
           </span>
         </div>
       </div>
-      <button
-        className="btn btn-danger px-3"
-        onClick={() => deleteColorProps(textoColorProps)}
-      >
-        Borrar{" "}
-      </button>
+      <div className="d-flex gap-2">
+        <button
+          className="btn btn-warning px-3"
+          onClick={() => onEditColorProps && onEditColorProps(textoColorProps)}
+        >
+          Editar
+        </button>
+        <button
+          className="btn btn-danger px-3"
+          onClick={() => deleteColorProps(textoColorProps)}
+        >
+          Borrar{" "}
+        </button>
+      </div>
     </li>
   );
 };
