@@ -40,7 +40,7 @@ function App() {
     <>
       <Navbar />
       <main className="container my-4">
-        <h1 className="text-center mb-3">Elige un Color</h1>
+        <h1 className="text-center mb-3">Agrega un color a la paleta </h1>
         <div className="d-flex flex-wrap justify-content-center gap-2 mb-4">
           {listaSugerencias.map((color) => {
             const colorCSS = traductorColores[color] || color;
