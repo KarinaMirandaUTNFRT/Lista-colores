@@ -46,7 +46,7 @@ const FormularioColor = () => {
             onChange={(e) => setColor(e.target.value)}
             value={color}
           />
-          <button className="btn btn-primary ms-2">Crear</button>
+          <button className="btn btn-primary ms-2">Agregar</button>
         </div>
       </form>
       <ListaColor arrayColoresProps={arrayColores} borrarColorProps={borrarColor}></ListaColor>
