@@ -23,10 +23,9 @@ const ItemColor = ({textoColorProps, deleteColorProps} ) => {
         <div 
           style={{ 
             backgroundColor: colorFinalCSS, 
-            width: '100%', 
+            width: '20%', 
             height: '40px', 
-            borderRadius: '6px', 
-            marginRight: '20px',
+            borderRadius: '4px', 
             border: '1px solid #dee2e6', // Borde sutil por si el color es blanco
             boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.1)' // Sombra interna para darle profundidad
           }} 
