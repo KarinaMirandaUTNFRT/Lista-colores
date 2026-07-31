@@ -45,4 +45,4 @@ Puedes ver el proyecto funcionando aquí: **[Enlace al Demo](#)**
 
 ## 👩‍💻 Autora
 
-Desarrollado por **[Emilse Andrea Arias](https://github.com/emiarias)**
+
