@@ -46,13 +46,13 @@ const ItemColor = ({ id, textoColorProps, deleteColorProps, onEditColorProps }) 
       <div className="d-flex gap-2">
         <button
           className="btn btn-warning px-3"
-          onClick={() => onEditColorProps && onEditColorProps({ _id: id, nombreColor: textoColorProps })}
+          onClick={() => onEditColorProps && onEditColorProps(id)}
         >
           Editar
         </button>
         <button
           className="btn btn-danger px-3"
-          onClick={() => deleteColorProps && deleteColorProps(id)}
+          onClick={() => deleteColorProps(id)}
         >
           Borrar{" "}
         </button>
