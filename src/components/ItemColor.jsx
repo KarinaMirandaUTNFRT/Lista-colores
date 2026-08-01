@@ -1,4 +1,4 @@
-const ItemColor = ({ id, textoColorProps, deleteColorProps, onEditColorProps }) => {
+const ItemColor = ({ id, textoColorProps, deleteColorProps, EditColorProps }) => {
   const traductorColores = {
     rojo: "red",
     azul: "blue",
@@ -46,7 +46,7 @@ const ItemColor = ({ id, textoColorProps, deleteColorProps, onEditColorProps }) 
       <div className="d-flex gap-2">
         <button
           className="btn btn-warning px-3"
-          onClick={() => onEditColorProps && onEditColorProps(id)}
+          onClick={() => EditColorProps && EditColorProps(id)}
         >
           Editar
         </button>
