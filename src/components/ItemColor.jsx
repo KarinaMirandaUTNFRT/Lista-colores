@@ -15,7 +15,7 @@ const ItemColor = ({ id, textoColorProps, deleteColorProps, onEditColorProps }) 
     celeste: "skyblue",
     turquesa: "turquoise",
   };
-  const colorLimpio = textoColorProps.toLowerCase().trim();
+  const colorLimpio = textoColorProps || "".toLowerCase().trim();
   const colorFinalCSS = traductorColores[colorLimpio] || colorLimpio;
   return (
     <li className="list-group-item    bg-black text-white  d-flex    align-items-center gap-3 border-secondary mb-2 p-2">
@@ -46,13 +46,13 @@ const ItemColor = ({ id, textoColorProps, deleteColorProps, onEditColorProps }) 
       <div className="d-flex gap-2">
         <button
           className="btn btn-warning px-3"
-          onClick={() => onEditColorProps && onEditColorProps(id)}
+          onClick={() => onEditColorProps && onEditColorProps({ _id: id, nombreColor: textoColorProps })}
         >
           Editar
         </button>
         <button
           className="btn btn-danger px-3"
-          onClick={() => deleteColorProps(id)}
+          onClick={() => deleteColorProps && deleteColorProps(id)}
         >
           Borrar{" "}
         </button>
