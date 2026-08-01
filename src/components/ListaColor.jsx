@@ -3,7 +3,7 @@ import ItemColor from "./ItemColor";
 const ListaColor = ({ 
   arrayColoresProps =[],
   borrarColorProps,
-  onEditColorProps,
+  EditColorProps,
  }) => {
   return (
     <ul
@@ -16,7 +16,7 @@ const ListaColor = ({
     id={color._id}
     textoColorProps={color.nombreColor}
     deleteColorProps={borrarColorProps}      
-    onEditColorProps={() =>onEditColorProps(color)}  
+    EditColorProps={() =>EditColorProps(color)}  
         />
       ))}
     </ul>
