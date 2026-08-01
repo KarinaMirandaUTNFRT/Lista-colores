@@ -141,7 +141,7 @@ const FormularioColor = () => {
       <ListaColor
         arrayColoresProps={arrayColores}
         borrarColorProps={borrarColor}
-        onEditColorProps={prepararEdicion}
+        EditColorProps={prepararEdicion}
       />
     </section>
   );
