@@ -15,7 +15,7 @@ const ItemColor = ({ id, textoColorProps, deleteColorProps, onEditColorProps }) 
     celeste: "skyblue",
     turquesa: "turquoise",
   };
-  const colorLimpio = textoColorProps.toLowerCase().trim();
+  const colorLimpio = textoColorProps || "".toLowerCase().trim();
   const colorFinalCSS = traductorColores[colorLimpio] || colorLimpio;
   return (
     <li className="list-group-item    bg-black text-white  d-flex    align-items-center gap-3 border-secondary mb-2 p-2">

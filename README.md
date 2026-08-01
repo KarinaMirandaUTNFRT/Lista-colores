@@ -1,6 +1,6 @@
-# 📝 Lista de Tareas
+# 📝 Lista de Colores
 
-Una aplicación web sencilla e intuitiva para gestionar y organizar tus tareas diarias.
+Una aplicación web sencilla e intuitiva para gestionar y organizar tus colores diarias.
 
 ## 🚀 Demo
 
@@ -16,11 +16,11 @@ Puedes ver el proyecto funcionando aquí: **[Enlace al Demo](#)**
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/rollingcodeschool/listaTareas-c23
+   git clone https://github.com/rollingcodeschool/listaColors-c23
    ```
 2. Navega a la carpeta del proyecto, instala las dependencies y ejecuta el proyecto:
    ```bash
-   cd 12-listaTareas
+   cd 12-listaColors
    npm install
    npm run dev
    ```
@@ -28,14 +28,14 @@ Puedes ver el proyecto funcionando aquí: **[Enlace al Demo](#)**
 ## 📂 Estructura del Proyecto
 
 ```text
-12-listaTareas/
+12-listaColors/
 ├── index.html      # Estructura principal
 ├── src
     └──  components # componentes del proyecto
         ├── Footer.jsx
-        ├── FormularioTarea.jsx
-        ├── ItemTarea.jsx
-        ├── ListaTarea.jsx
+        ├── FormularioColor.jsx
+        ├── ItemColor.jsx
+        ├── ListaColor.jsx
         └── Navbar.jsx
     ├── App.jsx
     ├── main.jsx
