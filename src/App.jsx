@@ -39,7 +39,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <main className="container my-4">
+      <main className="container my-4 flex-grow-1">
         <h1 className="text-center mb-3">Agrega un color a la paleta </h1>
         <div className="d-flex flex-wrap justify-content-center gap-2 mb-4">
           {listaSugerencias.map((color) => {
@@ -60,6 +60,7 @@ function App() {
                   fontSize: "0.85rem",
                   border: color === "blanco" ? "1px solid #6c757d" : "none",
                   boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
+                  cursor:"pointer"
                 }}
               >
                 {color}
